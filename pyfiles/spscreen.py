@@ -7,6 +7,9 @@ w = Tk()
 w.geometry("1500x788")
 w.title("Boot OS")
 w.config(bg='white')
+ic = PhotoImage(file = "wicn.ico")
+w.iconphoto(False, ic)
+
 
 Frame(w, width=427, height=250, bg="white").place(x=0,y=0)
 photo = PhotoImage(file="crplogo.png")
