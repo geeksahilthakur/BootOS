@@ -2,6 +2,8 @@ import tkinter
 import tkinter as tk
 from tkinter import font as tkfont, messagebox
 
+from pyfilez.tabs import tab2
+
 
 class SampleApp(tk.Tk):
 

@@ -35,13 +35,13 @@ def hello():
 
 
     uname = "geek sahil"
-    pswd = "@geek5117"
+    pswd = "geek5117"
 
     if uname == name_1 and pswd == password_1:
         print("hello")
         messagebox.showerror('Welcome to Boot OS', 'Welcome to Boot OS!', icon='info')
         l.destroy()
-        from pyfiles import tabs
+        from pyfilez import tabs
 
 
     else:
