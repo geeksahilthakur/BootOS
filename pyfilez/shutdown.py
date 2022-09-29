@@ -8,18 +8,18 @@ shut_down = Tk()
 shut_down.geometry("1500x788")
 shut_down.title("Boot OS")
 shut_down.config(bg='white')
-ic = PhotoImage(file = "wicn.ico")
-shut_down.iconphoto(False, ic)
+# ic = PhotoImage(file = "C:\\Users\\hp\\Desktop\\boot os\\pyfilez\\wicn.ico")
+# shut_down.iconphoto(False, ic)
 shut_down.overrideredirect(1)
 
 
 Frame(shut_down, width=1500, height=788, bg="white").place(x=0,y=0)
-photo = PhotoImage(file="crplogo.png")
+photo = PhotoImage(file="C:\\Users\\hp\\Desktop\\boot os\\pyfilez\\crplogo.png")
 main_logo = Label(shut_down, image=photo , bg="white")
 main_logo.place(x=450 , y =171)
 
-photo_a= PhotoImage(file="b.png")
-photo_b= PhotoImage(file="y.png")
+photo_a= PhotoImage(file="C:\\Users\\hp\\Desktop\\boot os\\pyfilez\\b.png")
+photo_b= PhotoImage(file="C:\\Users\\hp\\Desktop\\boot os\\pyfilez\\y.png")
 
 shutdown_text = Label(shut_down,text="Shutting down...", font=("", 14, ""), bg="white", fg="black").place(x=580, y=600)
 

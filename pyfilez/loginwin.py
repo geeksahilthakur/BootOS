@@ -2,6 +2,7 @@ import tkinter
 from tkinter import *
 from tkinter import messagebox
 
+
 l = Tk()
 l.geometry("1500x788")
 l.title("Boot OS")
@@ -30,12 +31,12 @@ def hello():
     name_1 = name.get()
     password_1 = password.get()
 
-    print("Username: " + name_1)
-    print("Password: " + password_1)
+    # print("Username: " + name_1)
+    # print("Password: " + password_1)
 
 
     uname = "geek sahil"
-    pswd = "geek5117"
+    pswd = "1234"
 
     if uname == name_1 and pswd == password_1:
         print("hello")

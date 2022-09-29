@@ -1,13 +1,16 @@
 import tkinter
 from tkinter import *
 from tkinter import ttk, messagebox
+import webview
 from self import self
 
 
 
 window = Tk()
 window.geometry("1500x788")
-window.overrideredirect(1)
+# window.overrideredirect(1)
+window.title("Boot OS")
+global notebook
 notebook = ttk.Notebook(window)
 
 tab1 = Frame(notebook, bg="white")
@@ -19,11 +22,11 @@ notebook.add(tab2, text="Recent Apps")
 notebook.pack(expand=True, fill="both")
 
 # tab1 starts
-sm_logo = PhotoImage(file="minilogo.png")
+sm_logo = PhotoImage(file="C:\\Users\\hp\\Desktop\\boot os\\pyfilez\\minilogo.png")
 main_logo = Label(tab1, image=sm_logo, bg="white")
 main_logo.place(x=30, y=20)
 
-search_png = PhotoImage(file="serchbar.png")
+search_png = PhotoImage(file="C:\\Users\\hp\\Desktop\\boot os\\pyfilez\\serchbar.png")
 search_bar = Label(tab1, image=search_png, bg="white")
 search_bar.place(x=300, y=25)
 
@@ -40,40 +43,44 @@ off_btn.place(x=1200, y=25)
 # tab1end
 
 Label(tab2, text="Recent Apps:", bg="white").place(x=590, y=20)
+
 ##################################################################################################################
 a = [0]
 def add_tab():
     if a == [0]:
         v = 1
         a.append(v)
+        global tab3
         tab3 = Frame(notebook, bg="white")
         notebook.add(tab3, text="Browser")
         Frame(tab3, width=427, height=250, bg="white").place(x=0, y=0)
-        self.photo = tkinter.PhotoImage(file='11.png')
+        self.photo = tkinter.PhotoImage(file='C:\\Users\\hp\\Desktop\\boot os\\pyfilez\\11.png')
         self.main_logo = Label(tab3, image=self.photo, bg="white")
         self.main_logo.place(x=540, y=50)
 
+
         def sw():
             notebook.select(tab3)
-        self.icon = tkinter.PhotoImage(file='1.png')
+        self.icon = tkinter.PhotoImage(file='C:\\Users\\hp\\Desktop\\boot os\\pyfilez\\1.png')
         self.main_logo = Button(tab2, image=self.icon, bg="white", bd=0, command=sw)
         self.main_logo.place(x=540, y=100)
+
 
         def back():
             tab3.destroy()
             self.main_logo.destroy()
             a.remove(v)
             notebook.select(tab1)
-            print("back", a)
+            # print("back", a)
 
         exit_button = Button(tab3, text="Exit", command=back).place(x=610,y=10)
-        print("bngyi window ")
-        print(a)
+        # print("bngyi window ")
+        # print(a)
         notebook.select(tab3)
 
     else:
         messagebox.showerror('Boot OS', 'App already opend ', icon='info')
-        notebook.select(tab2)
+        notebook.select(tab3)
 
 
 ###################################################################################################################
@@ -81,30 +88,30 @@ def add_tab():
 # btn = Button(tab1, text='Add new tab', bd='0', command=add_tab, width=20)
 # btn.place(x=550, y=450)
 
-bg_img = PhotoImage(file='yellow.png')
+bg_img = PhotoImage(file='C:\\Users\\hp\\Desktop\\boot os\\pyfilez\\yellow.png')
 bgg = Label(tab1, image=bg_img , bg="white",fg="white")
 bgg.place(x=180, y =90)
 
 app = Label(tab1, text="All Apps",font=("",15,"") ,bg="#FAB80A").place(x=610 ,y =130)
 ####
 
-bsr_img = PhotoImage(file='1.png')
+bsr_img = PhotoImage(file='C:\\Users\\hp\\Desktop\\boot os\\pyfilez\\1.png')
 bsr = Button(tab1, image=bsr_img,bg="#FAB80A",bd="0",command=add_tab).place(x=255, y=200)
 
-notez_img = PhotoImage(file='2.png')
+notez_img = PhotoImage(file='C:\\Users\\hp\\Desktop\\boot os\\pyfilez\\2.png')
 notez = Button(tab1, image=notez_img,bg="#FAB80A",bd="0").place(x=560,y=200)
 
-gamez_img = PhotoImage(file='3.png')
+gamez_img = PhotoImage(file='C:\\Users\\hp\\Desktop\\boot os\\pyfilez\\3.png')
 gamez = Button(tab1, image=gamez_img,bg="#FAB80A",bd="0").place(x=860,y=200)
 
 ####
-muz_img = PhotoImage(file='4.png')
+muz_img = PhotoImage(file='C:\\Users\\hp\\Desktop\\boot os\\pyfilez\\4.png')
 muz = Button(tab1, image=muz_img,bg="#FAB80A",bd="0").place(x=255,y=400)
 
-set_img = PhotoImage(file='5.png')
+set_img = PhotoImage(file='C:\\Users\\hp\\Desktop\\boot os\\pyfilez\\5.png')
 set = Button(tab1, image=set_img,bg="#FAB80A",bd="0").place(x=560,y=400)
 
-as_img = PhotoImage(file='6.png')
+as_img = PhotoImage(file='C:\\Users\\hp\\Desktop\\boot os\\pyfilez\\6.png')
 abuts = Button(tab1, image=as_img,bg="#FAB80A",bd="0").place(x=860,y=400)
 
 

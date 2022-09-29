@@ -47,6 +47,5 @@ for i in range(3):
     l4 = Label(w, image=photo_a, border=0, relief=SUNKEN).place(x=700, y=450)
     w.update_idletasks()
     time.sleep(0.5)
-
 w.destroy()
 import loginwin
